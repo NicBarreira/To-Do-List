@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             errorMessage.textContent = 'Por favor, escolha seu gênero.'; 
             errorMessage.style.display = 'block'; // Exibe a mensagem
         } else {
-            window.location.href = "#"; 
+            window.location.href = "/All/To-do-list/index.html"; 
         }
     });
 });
