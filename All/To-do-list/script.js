@@ -13,8 +13,18 @@ function addTask() {
         const taskLabel = document.createElement("label");
         taskLabel.textContent = taskText;
 
+        const deleteIcon = document.createElement("img");
+        deleteIcon.src = "Imgs/Delete_img.png";
+        deleteIcon.alt = "Excluir Tarefa!";
+        deleteIcon.classList.add("delete-icon")
+
+        deleteIcon.addEventListener("click", () => {
+            taskDiv.remove()
+        });
+
         taskDiv.appendChild(taskCheckbox);
         taskDiv.appendChild(taskLabel);
+        taskDiv.appendChild(deleteIcon);
 
         const taskList = document.getElementById("taskList");
         taskList.appendChild(taskDiv);
@@ -24,6 +34,7 @@ function addTask() {
         alert("Por favor, digite uma tarefa!");
     }
 }
+
 
 document.getElementById("btnTask").addEventListener("click", addTask);
 

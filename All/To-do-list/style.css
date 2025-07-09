@@ -1,30 +1,32 @@
-/* Definindo a fonte padrão do corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Fundo suave */
+    background-color: #f4f4f4;
     padding: 20px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Para centralizar o conteúdo verticalmente */
+    height: 100vh;
     box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     font-size: 2rem;
-    color: #333; /* Cor escura para o título */
+    color: #333;
     margin-bottom: 20px;
 }
 
 .to-do-list {
     width: 100%;
-    max-width: 600px; /* Limita o tamanho da lista */
+    max-width: 600px;
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
 .add-task {
@@ -45,14 +47,14 @@ h2 {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    max-width: 400px; /* Largura máxima do campo de entrada */
+    max-width: 400px;
     border-radius: 8px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
 }
 
 #taskInput:focus {
-    border-color: #007bff; /* Cor do contorno ao focar */
+    border-color: #007bff;
     outline: none;
 }
 
@@ -61,14 +63,14 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: #4CAF50; /* Cor verde para o botão */
+    background-color: #4CAF50;
     color: white;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 #btnTask:hover {
-    background-color: #45a049; /* Cor do botão ao passar o mouse */
+    background-color: #45a049;
 }
 
 #taskList {
@@ -86,6 +88,15 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.delete-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .task input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -93,12 +104,12 @@ h2 {
 }
 
 .task label {
+    flex-grow: 1;
     font-size: 18px;
     color: #333;
 }
 
-/* Estilo para quando a tarefa for marcada */
 .task input[type="checkbox"]:checked + label {
-    text-decoration: line-through; /* Riscar a tarefa quando marcada */
-    color: #888; /* Cor cinza para tarefas concluídas */
+    text-decoration: line-through;
+    color: #888;
 }
